@@ -1,0 +1,23 @@
+diff -ur giflib-4.1.6/lib/Makefile.am giflib-4.1.6.dll/lib/Makefile.am
+--- giflib-4.1.6/lib/Makefile.am	2007-11-10 23:47:55.000000000 +0100
++++ giflib-4.1.6.dll/lib/Makefile.am	2009-11-26 09:52:39.234375000 +0100
+@@ -21,6 +21,6 @@
+                     quantize.c  \
+ 					gif_lib_private.h
+ 
+-libgif_la_LDFLAGS = -version-info 5:6:1
++libgif_la_LDFLAGS = -version-info 5:6:1 -no-undefined
+ libgif_la_LIBADD = @DEVS@
+ libgif_CFLAGS = $(X_CFLAGS) $(AM_CFLAGS)
+diff -ur giflib-4.1.6/lib/Makefile.in giflib-4.1.6.dll/lib/Makefile.in
+--- giflib-4.1.6/lib/Makefile.in	2007-11-10 23:53:34.000000000 +0100
++++ giflib-4.1.6.dll/lib/Makefile.in	2009-11-26 09:52:22.828125000 +0100
+@@ -219,7 +219,7 @@
+                     quantize.c  \
+ 					gif_lib_private.h
+ 
+-libgif_la_LDFLAGS = -version-info 5:6:1
++libgif_la_LDFLAGS = -version-info 5:6:1  -no-undefined
+ libgif_la_LIBADD = @DEVS@
+ libgif_CFLAGS = $(X_CFLAGS) $(AM_CFLAGS)
+ all: all-am
